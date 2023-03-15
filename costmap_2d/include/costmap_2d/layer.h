@@ -140,6 +140,7 @@ protected:
   bool current_;
   bool enabled_;
   std::string name_;
+  uint8_t inflation_option_;
   tf2_ros::Buffer *tf_;
 
 private:

@@ -114,6 +114,7 @@ public:
    * @return The cost of the cell
    */
   unsigned char getCost(unsigned int mx, unsigned int my) const;
+  unsigned char getCost(unsigned int index) const;
 
   /**
    * @brief  Set the cost of a cell in the costmap

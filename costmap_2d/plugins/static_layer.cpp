@@ -151,16 +151,16 @@ unsigned char StaticLayer::interpretValue(unsigned char value)
 {
   // check if the static value is above the unknown or lethal thresholds
   if (track_unknown_space_ && value == unknown_cost_value_)
-    return NO_INFORMATION;
+    return toOri(XJU_COST_NO_INFORMATION, XJU_OPTION_INIT);
   else if (!track_unknown_space_ && value == unknown_cost_value_)
-    return FREE_SPACE;
+    return toOri(XJU_COST_FREE_SPACE, XJU_OPTION_INIT);
   else if (value >= lethal_threshold_)
-    return LETHAL_OBSTACLE;
+    return toOri(XJU_COST_LETHAL_OBSTACLE, XJU_OPTION_INIT);
   else if (trinary_costmap_)
-    return FREE_SPACE;
+    return toOri(XJU_COST_FREE_SPACE, XJU_OPTION_INIT);
 
   double scale = (double) value / lethal_threshold_;
-  return scale * LETHAL_OBSTACLE;
+  return toOri(scale * XJU_COST_LETHAL_OBSTACLE, XJU_OPTION_INIT);
 }
 
 void StaticLayer::incomingMap(const nav_msgs::OccupancyGridConstPtr& new_map)
@@ -337,8 +337,11 @@ void StaticLayer::updateCosts(costmap_2d::Costmap2D& master_grid, int min_i, int
         {
           if (!use_maximum_)
             master_grid.setCost(i, j, getCost(mx, my));
-          else
-            master_grid.setCost(i, j, std::max(getCost(mx, my), master_grid.getCost(i, j)));
+          else {
+            if (toXJUcost(getCost(mx, my)) > toXJUcost(master_grid.getCost(i, j))) {
+              master_grid.setCost(i, j, toOri(getCost(mx, my), std::max(toXJUoption(getCost(mx, my)), toXJUoption(master_grid.getCost(i, j)))));
+            }
+          }
         }
       }
     }

@@ -1,0 +1,49 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/wly/planning_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/amcl/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/base_local_planner/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/carrot_planner/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/clear_costmap_recovery/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/costmap_2d/include/**",
+        "/home/wly/planning_ws/src/xju-robot-noetic/src/coverage_path_planner/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/dwa_local_planner/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/global_planner/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/map_server/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/move_base/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/move_slow_and_clear/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/nav_core/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/navfn/include/**",
+        "/home/wly/planning_ws/src/openslam_gmapping/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/rotate_recovery/include/**",
+        "/home/wly/planning_ws/src/geometry2/tf2/include/**",
+        "/home/wly/planning_ws/src/geometry2/tf2_bullet/include/**",
+        "/home/wly/planning_ws/src/geometry2/tf2_eigen/include/**",
+        "/home/wly/planning_ws/src/geometry2/tf2_geometry_msgs/include/**",
+        "/home/wly/planning_ws/src/geometry2/tf2_kdl/include/**",
+        "/home/wly/planning_ws/src/geometry2/tf2_msgs/include/**",
+        "/home/wly/planning_ws/src/geometry2/tf2_ros/include/**",
+        "/home/wly/planning_ws/src/geometry2/tf2_sensor_msgs/include/**",
+        "/home/wly/planning_ws/src/navigation-xju-noetic/voxel_grid/include/**",
+        "/home/wly/planning_ws/src/xju-robot-noetic/src/explore/include/**",
+        "/home/wly/planning_ws/src/xju-robot-noetic/src/perception/include/**",
+        "/home/wly/planning_ws/src/xju-robot-noetic/src/pnc/include/**",
+        "/home/wly/planning_ws/src/xju-robot-noetic/src/simu/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

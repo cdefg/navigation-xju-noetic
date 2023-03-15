@@ -31,7 +31,11 @@ include_directories(
     ${EIGEN3_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS}
 )
-
+add_service_files(
+        DIRECTORY srv
+        FILES
+        keepOutZone.srv
+)
 add_definitions(${EIGEN3_DEFINITIONS})
 
 # messages
@@ -105,6 +109,7 @@ add_library(layers
   plugins/obstacle_layer.cpp
   plugins/static_layer.cpp
   plugins/voxel_layer.cpp
+  plugins/keep_out_layer.cpp
   src/observation_buffer.cpp
 )
 add_dependencies(layers ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})

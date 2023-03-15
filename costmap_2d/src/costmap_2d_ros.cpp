@@ -184,7 +184,6 @@ Costmap2DROS::~Costmap2DROS()
   }
   if (publisher_ != NULL)
     delete publisher_;
-
   delete layered_costmap_;
   delete dsrv_;
 }
